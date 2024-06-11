@@ -215,7 +215,7 @@ client.on("messageCreate", async (message) => {
         const embed = new EmbedBuilder()
         .setColor('#2b71ec')
         .setAuthor({
-          name: 'Player Stopped!',
+          name: 'Music dihentikan!',
           iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230824519220985896/6280-2.gif?ex=6641e8a8&is=66409728&hm=149efc9db2a92eb90c70f0a6fb15618a5b912b528f6b1dcf1b517c77a72a733a&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
