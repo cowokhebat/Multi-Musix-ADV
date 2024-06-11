@@ -267,18 +267,18 @@ client.riffy.on("trackStart", async (player, track) => {
     });
 
     fs.writeFileSync("musicard.png", musicard);
-    const details = `**Title:** ${track.info.title}\n` +
-    `**Author:** ${track.info.author}\n` +
-    `**Seekable:** ${track.info.seekable}\n` +
+    const details = `**Judul:** ${track.info.title}\n` +
+    `**Diupload oleh:** ${track.info.author}\n` +
+    `**Dapat diseek:** ${track.info.seekable}\n` +
     `**Stream:** ${track.info.stream}\n` +
-    `**Requester:** ${track.info.requester}\n` +
-    `**Source Name:** ${track.info.sourceName}`;
+    `**Diminta oleh:** ${track.info.requester}\n` +
+    `**Sumber:** ${track.info.sourceName}`;
 
     const musicEmbed = new EmbedBuilder()
         .setColor("#FF7A00")
 
         .setAuthor({
-            name: 'Lagi Setel Musicnya',
+            name: 'Lagu yang sedang di setel',
             iconURL: 'https://cdn.discordapp.com/attachments/1140841446228897932/1144671132948103208/giphy.gif', 
             url: 'https://discord.gg/xQF9f9yUEM'
           })
