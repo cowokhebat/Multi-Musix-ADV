@@ -57,7 +57,7 @@ client.on("messageCreate", async (message) => {
                 iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157218651179597884/1213-verified.gif?ex=6517cf5a&is=65167dda&hm=cf7bc8fb4414cb412587ade0af285b77569d2568214d6baab8702ddeb6c38ad5&', 
                 url: 'https://discord.gg/xQF9f9yUEM'
             })
-                .setDescription(`**Playlist Name : **${playlistInfo.name} \n**Tracks : **${tracks.length}`)
+                .setDescription(`**Nama Playlist : **${playlistInfo.name} \n**Lagu : **${tracks.length}`)
                 .setColor('#14bdff')
                 .setFooter({ text: 'Use queue command for more Information' });
             message.reply({ embeds: [embed] });
@@ -103,7 +103,7 @@ client.on("messageCreate", async (message) => {
         player.pause(true);
         const embed = new EmbedBuilder()
         .setAuthor({
-          name: 'Playback Paused!',
+          name: 'Music Dipause!',
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488720519049337/pause.png?ex=656b6a2e&is=6558f52e&hm=6695d8141e37330b5426f146ec6705243f497f95f08916a40c1db582c6e07d7e&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
@@ -119,7 +119,7 @@ client.on("messageCreate", async (message) => {
 
         const embed = new EmbedBuilder()
         .setAuthor({
-          name: 'Playback Resumed!',
+          name: 'Music Kembali Menyala Abangkuh💥!',
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488720762310757/play.png?ex=656b6a2e&is=6558f52e&hm=ae4f01060fe8ae93f062d6574ef064ca0f6b4cf40b172f1bd54d8d405809c7df&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
@@ -150,11 +150,11 @@ client.on("messageCreate", async (message) => {
         const embed = new EmbedBuilder()
         .setColor('#188dcc')
             .setAuthor({
-                 name: 'Removed Sucessfully!',
+                 name: 'Berhasil Menghapus Antrian!',
                  iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236794583732457473/7828-verify-ak.gif?ex=6641dff7&is=66408e77&hm=e4d3f67ff76adbb3b7ee32fa57a24b7ae4c5acfe9380598e2f7e1a6c8ab6244c&',
                  url: 'https://discord.gg/xQF9f9yUEM'
                })
-            .setDescription(`**Removed track:** ${removedTrack.info.title}`);  
+            .setDescription(`**Menghapus Lagu:** ${removedTrack.info.title}`);  
             message.reply({ embeds: [embed] });
 
     } else if (command === "queue") {
@@ -168,7 +168,7 @@ client.on("messageCreate", async (message) => {
             const embed = new EmbedBuilder()
             .setColor('#2b71ec')
             .setAuthor({
-                 name: 'Queue',
+                 name: 'Antrian',
                  iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488721001398333/queue.png?ex=656b6a2e&is=6558f52e&hm=7573613cbb8dcac83ba5d5fc55ca607cf535dd117b4492b1c918d619aa6fd7ad&',
                  url: 'https://discord.gg/xQF9f9yUEM'
                })
@@ -184,7 +184,7 @@ client.on("messageCreate", async (message) => {
         const embed = new EmbedBuilder()
            .setColor('#2b71ec')
         .setAuthor({
-          name: 'Skipped Song!',
+          name: 'Skip Lagu!',
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488721253052426/right-chevron-.png?ex=656b6a2e&is=6558f52e&hm=7a73aa51cb35f25eba52055c7b4a1b56bbf3a6d150643adc15b52dc533236956&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
@@ -278,7 +278,7 @@ client.riffy.on("trackStart", async (player, track) => {
         .setColor("#FF7A00")
 
         .setAuthor({
-            name: 'Currently playing a Track',
+            name: 'Lagi Setel Musicnya',
             iconURL: 'https://cdn.discordapp.com/attachments/1140841446228897932/1144671132948103208/giphy.gif', 
             url: 'https://discord.gg/xQF9f9yUEM'
           })
@@ -300,7 +300,7 @@ client.riffy.on("queueEnd", async (player) => {
         const embed = new EmbedBuilder()
         .setColor('#ffff00')
         .setAuthor({
-          name: 'Queue Ended!',
+          name: 'Antrian Berakhir!',
           iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230824519220985896/6280-2.gif?ex=6641e8a8&is=66409728&hm=149efc9db2a92eb90c70f0a6fb15618a5b912b528f6b1dcf1b517c77a72a733a&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
