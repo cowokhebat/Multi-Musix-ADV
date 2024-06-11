@@ -53,7 +53,7 @@ client.on("messageCreate", async (message) => {
             }
             const embed = new EmbedBuilder()
             .setAuthor({
-                name: 'Added To Queue',
+                name: 'Ditambahkan ke Antrian',
                 iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157218651179597884/1213-verified.gif?ex=6517cf5a&is=65167dda&hm=cf7bc8fb4414cb412587ade0af285b77569d2568214d6baab8702ddeb6c38ad5&', 
                 url: 'https://discord.gg/xQF9f9yUEM'
             })
