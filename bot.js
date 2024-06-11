@@ -70,11 +70,11 @@ client.on("messageCreate", async (message) => {
 
             const embed = new EmbedBuilder()
             .setAuthor({
-                name: 'Added To Queue',
+                name: 'Ditambahkan ke Antrian',
                 iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157218651179597884/1213-verified.gif?ex=6517cf5a&is=65167dda&hm=cf7bc8fb4414cb412587ade0af285b77569d2568214d6baab8702ddeb6c38ad5&', 
                 url: 'https://discord.gg/xQF9f9yUEM'
             })
-                .setDescription(`**${track.info.title} **has been queued up and is ready to play!`)
+                .setDescription(`**${track.info.title} **Telah Ditambahkan ke Antrian!`)
                 .setColor('#14bdff')
                 .setFooter({ text: 'Use queue command for more Information' });
             message.reply({ embeds: [embed] });
@@ -88,13 +88,13 @@ client.on("messageCreate", async (message) => {
         if (!player) return message.channel.send("No player available.");
     
         const loopOption = args[0];
-        if (!loopOption) return message.channel.send("Please provide a loop option: **queue**, **track**, or **none**.");
+        if (!loopOption) return message.channel.send("Pilih Bagian Apa Yang Mau di Loop: **queue**, **track**, or **none**.");
     
         if (loopOption === "queue" || loopOption === "track" || loopOption === "none") {
             player.setLoop(loopOption);
-            message.channel.send(`Loop set to: ${loopOption}`);
+            message.channel.send(`Loop disetel ke: ${loopOption}`);
         } else {
-            message.channel.send("Invalid loop option. Please choose `queue`, `track`, or `none`.");
+            message.channel.send("Salah Kak. Pilih Antara 3 ini `queue`, `track`, or `none`.");
         }
     } else if (command === "pause") {
         const player = client.riffy.players.get(message.guild.id); 
@@ -107,7 +107,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488720519049337/pause.png?ex=656b6a2e&is=6558f52e&hm=6695d8141e37330b5426f146ec6705243f497f95f08916a40c1db582c6e07d7e&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-        .setDescription('**Halt the beats! Music taking a break..**')
+        .setDescription('**Sudah Di Pause..**')
         .setColor('#2b71ec');
 
         message.reply({ embeds: [embed] });
@@ -123,7 +123,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488720762310757/play.png?ex=656b6a2e&is=6558f52e&hm=ae4f01060fe8ae93f062d6574ef064ca0f6b4cf40b172f1bd54d8d405809c7df&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-        .setDescription('**Back in action! Let the beats roll..**')
+        .setDescription('**Sudah Play Lagi..**')
         .setColor('#2b71ec');
         message.reply({ embeds: [embed] });
 
@@ -141,7 +141,7 @@ client.on("messageCreate", async (message) => {
 
         const index = parseInt(args[0]);
         if (isNaN(index) || index < 1 || index > player.queue.size) {
-            return message.channel.send(`Invalid index. Please provide a valid number between 1 and ${player.queue.size}.`);
+            return message.channel.send(`Salah kak. Masukin Nomor Antara Nomor 1 dan ${player.queue.size}.`);
         }
 
         const removedTrack = player.queue.remove(index - 1);
@@ -188,7 +188,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1175488636033175602/1175488721253052426/right-chevron-.png?ex=656b6a2e&is=6558f52e&hm=7a73aa51cb35f25eba52055c7b4a1b56bbf3a6d150643adc15b52dc533236956&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-          .setDescription('**Let\'s move on to the next beat...**');
+          .setDescription('**Putar Lagu Selanjutnya Berhasil...**');
         
         message.reply({ embeds: [embed] });
     } else if (command === "shuffle") {
@@ -203,7 +203,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236794583732457473/7828-verify-ak.gif?ex=6641dff7&is=66408e77&hm=e4d3f67ff76adbb3b7ee32fa57a24b7ae4c5acfe9380598e2f7e1a6c8ab6244c&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-          .setDescription('**Let\'s change the rhythm with a random selection!**');
+          .setDescription('**Shuffled telah diaktifkan, Lagu selanjutnya akan dipilih random dari antrian!**');
 
         message.reply({ embeds: [embed] });
     } else if (command === "stop") {
@@ -219,7 +219,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230824519220985896/6280-2.gif?ex=6641e8a8&is=66409728&hm=149efc9db2a92eb90c70f0a6fb15618a5b912b528f6b1dcf1b517c77a72a733a&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-          .setDescription('**Bringing the music to a halt...**');
+          .setDescription('**Musicnya sudah dimatiin kok ^^...**');
         message.reply({ embeds: [embed] });
     } else if (command === "clear") {
         const player = client.riffy.players.get(message.guild.id); 
@@ -234,7 +234,7 @@ client.on("messageCreate", async (message) => {
           iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236802032938127470/4104-verify-yellow.gif?ex=6641e6e7&is=66409567&hm=25ecf140bc9c1f9492e9b7a0b573457fd498d744c28d56c5df663d7f84302083&',
           url: 'https://discord.gg/xQF9f9yUEM'
         })
-          .setDescription('**Starting afresh, clearing out the queue..**');
+          .setDescription('**Antrian Telah Dibersihkan..**');
         message.reply({ embeds: [embed] });
     }
 });
