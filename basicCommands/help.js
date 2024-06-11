@@ -13,7 +13,7 @@ module.exports = {
       .setColor('#2b71ec')
       .setAuthor({
         name: 'Im here to Help!',
-        iconURL: 'https://cdn.discordapp.com/attachments/1175487983915376662/1175667506791325706/communication.png?ex=656c10b0&is=65599bb0&hm=e378f1b355a2401bcab504b08a0766001d6b7c090c91ce0a7a7a87c868feb955&', 
+        iconURL: 'https://cdn.discordapp.com/attachments/1239608844536123534/1239935802641879083/015137300_1603695119-seen-IQ1f9gMTie0-unsplash.jpg?ex=6669a5b4&is=66685434&hm=f1cbaa0ccdfaf6f6efd67c70c2e016d60ef74917a5befe0a937720394719bd8c&', 
         url: 'https://discord.gg/FUEHs7RCqz'
     })
      
@@ -61,17 +61,17 @@ module.exports = {
 
     const button1 = new ButtonBuilder()
       .setLabel('YouTube')
-      .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
+      .setURL('https://www.youtube.com/@SobaNightcore')
       .setStyle(ButtonStyle.Link);
 
     const button2 = new ButtonBuilder()
       .setLabel('Discord')
-      .setURL('https://discord.gg/xQF9f9yUEM')
+      .setURL('https://discord.gg/WZzuzpcRf4')
       .setStyle(ButtonStyle.Link);
 
     const button3 = new ButtonBuilder()
       .setLabel('Code')
-      .setURL('https://github.com/GlaceYT')
+      .setURL('https://github.com/SobaNightcore')
       .setStyle(ButtonStyle.Link);
       
     const row = new ActionRowBuilder()
