@@ -60,18 +60,18 @@ module.exports = {
       .setImage(`https://cdn.discordapp.com/attachments/1239608844536123534/1239935802641879083/015137300_1603695119-seen-IQ1f9gMTie0-unsplash.jpg?ex=6669a5b4&is=66685434&hm=f1cbaa0ccdfaf6f6efd67c70c2e016d60ef74917a5befe0a937720394719bd8c&`);
 
     const button1 = new ButtonBuilder()
-      .setLabel('YouTube')
-      .setURL('https://www.youtube.com/@SobaNightcore')
+      .setLabel('Tiktok Mamah Erreniel')
+      .setURL('https://www.tiktok.com/@errenielshanika')
       .setStyle(ButtonStyle.Link);
 
     const button2 = new ButtonBuilder()
-      .setLabel('Discord')
+      .setLabel('Discord Mamah Erreniel')
       .setURL('https://discord.gg/WZzuzpcRf4')
       .setStyle(ButtonStyle.Link);
 
     const button3 = new ButtonBuilder()
-      .setLabel('Code')
-      .setURL('https://github.com/SobaNightcore')
+      .setLabel('Youtube Soba')
+      .setURL('https://www.youtube.com/@SobaNightcore')
       .setStyle(ButtonStyle.Link);
       
     const row = new ActionRowBuilder()
