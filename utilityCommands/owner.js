@@ -9,7 +9,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor('#FFFFFF')
             .setTitle(' 🫅 Owner Info')
-            .setDescription(`__**About me**__:\n 🤖 Myself Soba (Nobuyuki). I am a discord bot developer and web developer. I love playing games, watching anime and building different webserver applications. You will get faster replies on instagram than other social media. Feel free to contact me!\n ❤️ [GlceYT](${youtubeLink})\n 💙 [GlaceYTT](${InstagramLink})`)
+            .setDescription(`__**About me**__:\n 🤖 Myself Soba (Nobuyuki). I am a discord bot developer and web developer. I love playing games, watching anime and building different webserver applications. You will get faster replies on instagram than other social media. Feel free to contact me!\n ❤️ [Youtube Soba](${youtubeLink})\n 💙 [Instagram Soba](${InstagramLink})`)
             .setTimestamp();
 
 
